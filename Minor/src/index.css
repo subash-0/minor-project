@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+    body::-webkit-slider-runnable-track {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: #ff0000;
+    cursor: pointer;
+    }
+    body::-webkit-slider-thumb:hover {
+    background: #f1f1f1;
+    }
+  .animate-slide-up {
+    animation: slideUp 0.5s ease-out both;
+  }
+  @keyframes slideUp {
+    0% {
+      transform: translateY(50%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+}
