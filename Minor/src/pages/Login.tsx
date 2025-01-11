@@ -2,7 +2,7 @@
 
 import { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
-
+import {handleLogin} from "../utils/api/Fetcher"
 import { Eye, EyeOff } from 'lucide-react'
 import {Button,Input,Label,Card,CardContent,CardDescription,CardFooter,CardHeader,CardTitle, Alert,AlertDescription} from "../components/component"
 export default function LoginPage() {
@@ -11,7 +11,7 @@ export default function LoginPage() {
   const [error, setError] = useState('')
   const [showPassword, setShowPassword] = useState(false)
   const [isLoading, setIsLoading] = useState(false)
-  const router = useNavigate()
+  const navigate = useNavigate()
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
@@ -27,13 +27,7 @@ export default function LoginPage() {
 
     // Here you would typically make an API call to your authentication endpoint
     try {
-      // Simulating an API call
-      await new Promise(resolve => setTimeout(resolve, 1000))
-      
-      // If login is successful, redirect to dashboard
-      // For demo purposes, we're just simulating a successful login
-      console.log('Login successful')
-      router('/')
+       handleLogin(email, password, navigate)
     } catch (error) {
       console.error('Login failed:', (error instanceof Error ? error.message : 'Unknown error'))
       setError('Invalid email or password')

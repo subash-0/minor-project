@@ -19,7 +19,6 @@ const signup = async (req: Request, res: Response): Promise<void> => {
       res.status(400).json({ message: 'User already exists' });
       return;
     }
-
     // Hash the password
     const hashedPassword = await hashPassword(password);
 
@@ -38,13 +37,13 @@ const signup = async (req: Request, res: Response): Promise<void> => {
 
     // Set the token in a cookie
     res.cookie('token', token, {
-      httpOnly: true,
+      httpOnly: false,
       secure: process.env.NODE_ENV === 'production',
       maxAge: 3*24*3600*1000, // 3 days
-      sameSite: 'none',
+      sameSite: process.env.NODE_ENV === 'production' ? 'none' : 'lax'
     });
 
-    // Respond with success
+
     res.status(201).json({ message: 'User created successfully' });
   } catch (error) {
     console.error(error);
@@ -74,10 +73,10 @@ const login = async (req: Request, res: Response): Promise<void> => {
       expiresIn: '3d',
     });
     res.cookie('token', token, {
-      httpOnly: true,
+      httpOnly: false,
       secure: process.env.NODE_ENV === 'production',
       maxAge: 3*24*3600*1000, // 3 days
-      sameSite: 'none',
+      sameSite: process.env.NODE_ENV === 'production' ? 'none' : 'lax'
     });
     res.status(200).json({message: 'Login successful'});
 
@@ -87,4 +86,21 @@ const login = async (req: Request, res: Response): Promise<void> => {
   }
 }
 
-export  {signup, login};
+ const authondicateTohome = async (req: Request, res: Response): Promise<void> => {
+   const user = req.user;
+  const newUser = await User.findById(user.userId);
+  if(newUser){
+    res.status(200).json({status:true});
+  }else{
+    res.status(400).json({status:false});
+  }
+}
+
+const logout = async (req: Request, res: Response): Promise<void> => {
+  res.clearCookie('token');
+  res.status(200).json({message: 'Logout successful'});
+}
+
+
+
+export  {signup, login, logout, authondicateTohome};

@@ -19,6 +19,7 @@ import toast from 'react-hot-toast'
 import { useNavigate } from 'react-router-dom'
 import axios from 'axios'
 axios.defaults.withCredentials = true
+import {handleGoogleLogin, handleDiscordLogin} from "../utils/api/Fetcher"
 
 export default function SignupPage() {
   const navigate = useNavigate()
@@ -59,14 +60,15 @@ export default function SignupPage() {
         headers: {
           'Content-Type': 'application/json'
         },
-        withCredentials: true,
+        withCredentials: true
       }
     ).then(res => {
+      console.log(res)
         if(res.status === 201) {
           toast.success('Signup successful', {
             duration: 4000
           })
-          navigate('/login')
+          navigate('/')
         }
       }).catch(err => {
         if(err.response) {
@@ -91,8 +93,12 @@ export default function SignupPage() {
   }
 
   const handleSocialSignup = (provider: string) => {
-    console.log(`Signing up with ${provider}`)
-    // Implement social signup logic here
+    if(provider === 'Google'){
+      handleGoogleLogin()
+    }
+   if(provider === 'Discord'){
+      handleDiscordLogin()
+    }
   }
   return (
     <div className="flex items-center justify-center min-h-screen bg-gray-100 overflow-hidden">

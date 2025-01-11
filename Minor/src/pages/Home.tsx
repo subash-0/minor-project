@@ -42,7 +42,7 @@ export default function Home() {
               ref={fileInputRef}
             />
             <Button variant="outline" onClick={handleUpload} className="cursor-pointer">
-              <Upload className="sm:mr-2 h-4 w-4" /> <span className='hidden sm:block'>Choose Image</span>
+              <Upload className="sm:mr-2 h-4 w-4" /> <span className='hidden sm:block'> {selectedImage?'Change Image' : 'Choose Image'} </span>
             </Button>
 
             <Button variant="outline" className="cursor-pointer">
