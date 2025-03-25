@@ -44,3 +44,9 @@ rad.json
 *.flf
 #Test results file
 TestResults.xml
+__pycache__
+*.pyc
+*.pyo
+*.pyd
+modeltest.ipynb
+.ipynb
