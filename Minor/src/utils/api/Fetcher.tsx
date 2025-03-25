@@ -82,7 +82,7 @@ export const handlerRedirect = async () => {
             return true;
         }
         return false;
-    } catch (error : any) {
+    } catch (error: any) {
          toast.error(error.response?.data?.message || error.message);
         console.error('Error during auth check:', error.response?.data?.message || error.message);
         return false; // Explicitly return false on error
@@ -96,4 +96,8 @@ export const handleGoogleLogin = () => {
 
 export const handleDiscordLogin = () => {
     window.location.href = `${import.meta.env.VITE_BASE_URL}/api/v1/auth/discord`;
+}
+
+export const handleFacebookLogin = () => {
+    window.location.href = `${import.meta.env.VITE_BASE_URL}/api/v1/auth/facebook`;
 }

@@ -19,7 +19,7 @@ import toast from 'react-hot-toast'
 import { useNavigate } from 'react-router-dom'
 import axios from 'axios'
 axios.defaults.withCredentials = true
-import {handleGoogleLogin, handleDiscordLogin} from "../utils/api/Fetcher"
+import {handleGoogleLogin, handleDiscordLogin, handleFacebookLogin} from "../utils/api/Fetcher"
 
 export default function SignupPage() {
   const navigate = useNavigate()
@@ -98,6 +98,9 @@ export default function SignupPage() {
     }
    if(provider === 'Discord'){
       handleDiscordLogin()
+    }
+    if(provider === 'Facebook'){
+      handleFacebookLogin()
     }
   }
   return (

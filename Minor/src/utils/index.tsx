@@ -1,1 +1,3 @@
-export {handleSignUp} from './api/Fetcher.tsx';
+export {handleSignUp} from './api/Fetcher';
+
+
