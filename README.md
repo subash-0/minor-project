@@ -1,50 +1,87 @@
-# Colorizer
+# Image Colorization using AI
 
-Colorizer is an AI-powered application that transforms black-and-white images into vibrant, colorful renditions. Leveraging state-of-the-art machine learning algorithms, this tool provides users with an intuitive interface to restore and enhance the aesthetic appeal of monochrome images.
+## Overview
+This project focuses on converting black-and-white images into vibrant color using an AI-driven approach. The system utilizes a convolutional neural network (CNN) based autoencoder and a conditional Generative Adversarial Network (cGAN) to generate realistic colorized images.
 
----
+## Folder Structure
+```
+minor-project/
+│── model/           # Contains AI models and training scripts
+│── minor-backend/   # Backend (PHP, MySQL, authentication, and APIs)
+│── minor/           # Frontend (React.js, Tailwind CSS, Vite)
+```
 
 ## Features
+- **User Authentication**: Secure login and signup system to record user-specific data.
+- **AI Model**: 
+  - Encoder: ResNet-based feature extraction.
+  - Decoder: Custom-built architecture.
+  - cGAN Model: Includes a generator and discriminator for improved colorization quality.
+- **Data Processing**: Preprocessing pipeline to handle grayscale image input and prepare it for training.
+- **Training & Evaluation**: 
+  - Implements an autoencoder and cGAN for colorization.
+  - Utilizes Optuna for hyperparameter tuning.
+  - Returns both training and testing loss metrics.
+- **Storage Management**: Stores both original and colorized images in a database.
+  - Automatically deletes grayscale images if an error occurs during colorization.
 
-- Automatic coloring of black-and-white images using AI.
-- Intuitive user interface for seamless image upload and download.
-- Efficient backend processing with Node.js and Express.
-- Frontend built with TypeScript and React.
+## Tech Stack
+- **Frontend**: React.js, Tailwind CSS, Vite
+- **Backend**: PHP, MySQL
+- **AI Frameworks**: PyTorch, scikit-image
+- **Authentication**: JWT-based system
 
----
-
-## Installation Guide
-
-Follow these steps to set up the project locally:
-
+## Installation
 ### Prerequisites
-
-Ensure you have the following installed on your system:
-1. **Node.js** (v14 or higher) - [Download Node.js](https://nodejs.org/).
-2. **npm** (v6 or higher) or **Yarn**.
-3. **Git** - [Download Git](https://git-scm.com/).
-
----
+Ensure you have the following installed:
+- Node.js & npm
+- Python (with PyTorch, scikit-image, and Optuna)
+- MySQL Database
+- PHP (for backend API)
 
 ### Steps
-
-
-1. Clone the Repository:
-   ```bash
-    git clone https://github.com/your-username/colorizer.git
-
-2. Navigate to the Project Directory:
-   ```bash
-   cd colorizer
-
- 3. Install Dependencies:
-  Using npm:
-  ```bash
+1. Clone the repository:
+   ```sh
+   git clone https://github.com/your-repo/image-colorization.git
+   cd image-colorization
+   ```
+2. Install dependencies in each folder:
+   ```sh
+   cd minor
    npm install
- 
-4. Run the project
-```bash
-  npm run dev
+   cd ../minor-backend
+   npm install
+   ```
+3. Start the frontend:
+   ```sh
+   cd ../minor
+   npm run dev
+   ```
+4. Set up the backend:
+   - Configure the `.env` file for database credentials.
+   - Start the PHP backend server.
+5. Run the AI model:
+   ```sh
+   cd ../model
+   python train.py  # Train the model
+   python infer.py --input path/to/image.jpg  # Test colorization
+   ```
 
+## Usage
+- Users can upload a grayscale image.
+- The system processes the image and returns a colorized version.
+- Users can download the output or compare with the original.
 
+## Future Enhancements
+- Improve the cGAN model for better color accuracy.
+- Add real-time image preview during colorization.
+- Deploy as a cloud-based web application.
 
+## Contributors
+- Subash kumar yadav
+- Ritesh sahani
+- Md. Astafar Alam
+- Reshmi Jha
+
+## Samples
+![Project Sample](https://shorturl.at/RApdi)
