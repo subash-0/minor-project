@@ -8,7 +8,7 @@ This project focuses on converting black-and-white images into vibrant color usi
 minor-project/
 │── model/           # Contains AI models and training scripts
 │── minor-backend/   # Backend (Node and Express, MongoDB, authentication, and APIs)
-│── minor/           # Frontend (React.js, Tailwind CSS, Vite)
+│── minor/           # Frontend (React.TS, Tailwind CSS, Vite)
 ```
 
 ## Features
@@ -26,7 +26,7 @@ minor-project/
   - Automatically deletes grayscale images if an error occurs during colorization.
 
 ## Tech Stack
-- **Frontend**: React.js, Tailwind CSS, Vite
+- **Frontend**: React.TS, Tailwind CSS, Vite, TypeScript
 - **Backend**: Node and Express, MongoDB
 - **AI Frameworks**: PyTorch, scikit-image
 - **Authentication**: JWT-based system
@@ -77,10 +77,13 @@ Ensure you have the following installed:
 - Deploy as a cloud-based web application.
 
 ## Contributors
-- Subash kumar yadav [LinkedIn](https://www.linkedin.com/in/subash-kumar-yadav/)
-- Ritesh sahani  [LinkedIn](https://www.linkedin.com/in/ritesh-sahani-548a4219a/)
+- Subash Kumar Yadav [LinkedIn](https://www.linkedin.com/in/subash-kumar-yadav/)
+- Ritesh Sahani  [LinkedIn](https://www.linkedin.com/in/ritesh-sahani-548a4219a/)
 - Md. Astafar Alam [LinkedIn](https://www.linkedin.com/in/md-astafar-alam-b00985307/)
 - Reshmi Jha [LinkedIn](https://www.linkedin.com/in/reshmijha023/)
 
 ## Samples
 ![Project Sample](https://shorturl.at/RApdi)
+![Sample 1](./sample1.png)
+![Sample 2](./sample2.png)
+
