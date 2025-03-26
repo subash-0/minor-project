@@ -7,7 +7,7 @@ This project focuses on converting black-and-white images into vibrant color usi
 ```
 minor-project/
 │── model/           # Contains AI models and training scripts
-│── minor-backend/   # Backend (PHP, MySQL, authentication, and APIs)
+│── minor-backend/   # Backend (Node and Express, MongoDB, authentication, and APIs)
 │── minor/           # Frontend (React.js, Tailwind CSS, Vite)
 ```
 
@@ -27,7 +27,7 @@ minor-project/
 
 ## Tech Stack
 - **Frontend**: React.js, Tailwind CSS, Vite
-- **Backend**: PHP, MySQL
+- **Backend**: Node and Express, MongoDB
 - **AI Frameworks**: PyTorch, scikit-image
 - **Authentication**: JWT-based system
 
@@ -36,8 +36,8 @@ minor-project/
 Ensure you have the following installed:
 - Node.js & npm
 - Python (with PyTorch, scikit-image, and Optuna)
-- MySQL Database
-- PHP (for backend API)
+- MongoDB
+- EXPRESSJS (for backend API)
 
 ### Steps
 1. Clone the repository:
@@ -59,12 +59,11 @@ Ensure you have the following installed:
    ```
 4. Set up the backend:
    - Configure the `.env` file for database credentials.
-   - Start the PHP backend server.
+   - Start the Node and Express backend server.
 5. Run the AI model:
    ```sh
    cd ../model
-   python train.py  # Train the model
-   python infer.py --input path/to/image.jpg  # Test colorization
+   python app.py  # Train the model
    ```
 
 ## Usage
@@ -78,10 +77,10 @@ Ensure you have the following installed:
 - Deploy as a cloud-based web application.
 
 ## Contributors
-- Subash kumar yadav
-- Ritesh sahani
-- Md. Astafar Alam
-- Reshmi Jha
+- Subash kumar yadav [LinkedIn](https://www.linkedin.com/in/subash-kumar-yadav/)
+- Ritesh sahani  [LinkedIn](https://www.linkedin.com/in/ritesh-sahani-548a4219a/)
+- Md. Astafar Alam [LinkedIn](https://www.linkedin.com/in/md-astafar-alam-b00985307/)
+- Reshmi Jha [LinkedIn](https://www.linkedin.com/in/reshmijha023/)
 
 ## Samples
 ![Project Sample](https://shorturl.at/RApdi)
