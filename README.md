@@ -91,7 +91,7 @@ Ensure you have the following installed:
 
 <details open>
 <summary><b>📑 Chapters</b></summary>
-
+0. [Overview](./tutorial/README.md)
 1. [Frontend Application Structure](./tutorial/01_frontend_application_structure_.md)  
 2. [User Authentication System](./tutorial/02_user_authentication_system_.md)  
 3. [Image Colorization Service](./tutorial/03_image_colorization_service_.md)  
@@ -114,5 +114,5 @@ Here’s what you’ll learn:
 - **Chapter 4: Image History Management** → Manage and track previously colorized images.  
 - **Chapter 5: Deep Learning Colorization Model** → Dive into the AI model powering colorization.  
 
-👉 Start with **[Chapter 1](./tutorial/01_frontend_application_structure_.md)** 🚀
+👉 Start with **[Overview](./tutorial/README.md)** 🚀
 
