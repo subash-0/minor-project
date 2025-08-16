@@ -91,6 +91,7 @@ Ensure you have the following installed:
 
 <details open>
 <summary><b>📑 Chapters</b></summary>
+  
 0. [Overview](./tutorial/README.md)
 1. [Frontend Application Structure](./tutorial/01_frontend_application_structure_.md)  
 2. [User Authentication System](./tutorial/02_user_authentication_system_.md)  
