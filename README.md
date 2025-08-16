@@ -1,4 +1,4 @@
-# Image Colorization using AI
+# Image Colorization using AI → [Tutorial](./tutorials) 
 
 ## Overview
 This project focuses on converting black-and-white images into vibrant color using an AI-driven approach. The system utilizes a convolutional neural network (CNN) based autoencoder and a conditional Generative Adversarial Network (cGAN) to generate realistic colorized images.
