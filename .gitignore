@@ -50,3 +50,5 @@ __pycache__
 *.pyd
 modeltest.ipynb
 .ipynb
+
+/model/myenv310
