@@ -6,7 +6,7 @@ import io
 import torchvision.transforms as transforms
 from skimage.color import rgb2lab, lab2rgb
 from model import MainModel
-
+import os
 from fastai.vision.learner import create_body
 from torchvision.models import resnet18
 import torchvision.models as models
