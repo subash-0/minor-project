@@ -26,8 +26,9 @@ joblib==1.5.2
 scikit-image==0.20.0 
 
 # Torch
-torch==1.13.1
-torchvision==0.14.1
+torch==1.13.1+cpu
+torchvision==0.14.1+cpu -f https://download.pytorch.org/whl/torch_stable.html
+
 gunicorn==21.2.0
 fastai==2.7.12
 Pillow==11.3.0
