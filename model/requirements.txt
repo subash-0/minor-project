@@ -30,3 +30,4 @@ torch==1.13.1
 torchvision==0.14.1
 gunicorn==21.2.0
 fastai==2.7.12
+Pillow==11.3.0
