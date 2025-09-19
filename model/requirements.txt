@@ -23,6 +23,8 @@ matplotlib==3.10.6
 scipy==1.15.3
 joblib==1.5.2
 
+scikit-image==0.20.0 
+
 # Torch
 torch==1.13.1
 torchvision==0.14.1
