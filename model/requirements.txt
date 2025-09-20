@@ -28,7 +28,8 @@ scikit-image==0.20.0
 # Torch
 
 # Torch CPU-only
-torch==1.13.1+cpu
+
+torch==1.13.1+cpu --extra-index-url https://download.pytorch.org/whl/cpu
 torchvision==0.14.1+cpu -f https://download.pytorch.org/whl/cpu/torch_stable.html
 
 gunicorn==21.2.0
